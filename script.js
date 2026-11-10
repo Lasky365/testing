@@ -3,14 +3,8 @@ const giftMessage = document.getElementById('giftMessage');
 const heartMessageButton = document.getElementById('openHeartMessage');
 const heartMessage = document.getElementById('heartMessage');
 const confettiLayer = document.getElementById('confettiLayer');
-const photoInput = document.getElementById('photoInput');
-const photoPreview = document.getElementById('photoPreview');
-const photoPlaceholder = document.getElementById('photoPlaceholder');
-const removePhotoButton = document.getElementById('removePhoto');
-const photoStatus = document.getElementById('photoStatus');
 
 const colors = ['#ffd972', '#ff8bc7', '#9ce7ff', '#bca7ff', '#7af0c1', '#fff4ab'];
-let photoUrl = null;
 
 function showGift() {
   giftMessage.classList.add('visible');
@@ -106,47 +100,6 @@ function createSakuraPetals() {
     document.body.appendChild(petal);
   }
 }
-
-function clearPhoto() {
-  if (photoUrl) {
-    URL.revokeObjectURL(photoUrl);
-    photoUrl = null;
-  }
-
-  photoPreview.removeAttribute('src');
-  photoPreview.hidden = true;
-  photoPlaceholder.hidden = false;
-  removePhotoButton.hidden = true;
-  photoInput.value = '';
-  photoStatus.textContent = 'Photo removed.';
-}
-
-photoInput.addEventListener('change', () => {
-  const [file] = photoInput.files;
-
-  if (!file) {
-    return;
-  }
-
-  if (!file.type.startsWith('image/')) {
-    photoInput.value = '';
-    photoStatus.textContent = 'Please choose an image file.';
-    return;
-  }
-
-  if (photoUrl) {
-    URL.revokeObjectURL(photoUrl);
-  }
-
-  photoUrl = URL.createObjectURL(file);
-  photoPreview.src = photoUrl;
-  photoPreview.hidden = false;
-  photoPlaceholder.hidden = true;
-  removePhotoButton.hidden = false;
-  photoStatus.textContent = `${file.name} added to the birthday card.`;
-});
-
-removePhotoButton.addEventListener('click', clearPhoto);
 
 heartMessageButton.addEventListener('click', () => {
   const isOpen = heartMessage.classList.toggle('visible');
