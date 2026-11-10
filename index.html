@@ -37,6 +37,8 @@
             deeply cherished, and endlessly admired. 💕✨
           </p>
 
+          <div class="message-divider" aria-hidden="true"><span>✦</span><i></i><span>♡</span><i></i><span>✦</span></div>
+
           <div class="love-row" aria-label="love words">
             <span>✨ Love</span>
             <span>💖 Joy</span>
@@ -47,8 +49,30 @@
 
           <button id="openGift" class="gift-button" type="button" aria-controls="giftMessage" aria-expanded="false">🎁 Open your gift</button>
 
-          <div id="giftMessage" class="gift-message" aria-live="polite" aria-hidden="true">
+          <div id="giftMessage" class="gift-message" aria-label="Your birthday gift message" tabindex="0" aria-live="polite" aria-hidden="true" inert>
             <span class="sparkle">✦</span>
+            <h2 class="gift-title">Happy Birthday, cutie! 🎂💖</h2>
+            <p class="gift-note">Today is all about you, my beautiful birthday girl! Your kind heart, lovely smile, and the way you make ordinary moments feel special mean more to me than I can say. I hope this little gift makes you smile and reminds you how cherished you are. May your day be sprinkled with cake, giggles, cuddles, and the sweetest surprises—you deserve all the love in the world! 🎈🧸✨💖</p>
+            <div class="photo-upload">
+              <div class="photo-frame">
+                <div id="photoPlaceholder" class="photo-placeholder">
+                  <span aria-hidden="true">📷</span>
+                  <strong>Your favorite photo goes here</strong>
+                  <small>Add a picture to make this card extra special</small>
+                </div>
+                <img id="photoPreview" class="photo-preview" alt="Your selected photo" hidden />
+              </div>
+              <div class="photo-actions">
+                <label class="photo-button" for="photoInput">📷 Choose a photo</label>
+                <input id="photoInput" class="visually-hidden" type="file" accept="image/*" aria-describedby="photoHelp" />
+                <button id="removePhoto" class="remove-photo" type="button" hidden>Remove photo</button>
+              </div>
+              <p id="photoHelp" class="photo-help">Your photo stays on this device and isn’t uploaded.</p>
+              <p id="photoStatus" class="visually-hidden" aria-live="polite"></p>
+            </div>
+            <p class="gift-photo-note">Whenever you look at this picture, remember how very loved you are. I hope it brings you a smile, today and on all the days that need a little extra sunshine. 📸💗🌷</p>
+            <p class="gift-photo-note">I love you more than words can ever say. You make my life brighter just by being in it, and I feel so lucky to love you, cheer for you, and share all these little moments with you. No matter where life takes us, you’ll always have my heart. 💖🥰🌙</p>
+            <p class="gift-photo-note">And if your heart feels the same, my sweetest hope is that you’ll choose me too. I’d love to keep making memories with you, sharing every laugh and little adventure, and choosing each other again with every tomorrow. 💞🌷✨</p>
             <p>
               You are my favorite person, and the world feels more beautiful just because you are
               in it. Keep shining, keep growing, and keep being the wonderful soul you are. May
@@ -73,25 +97,32 @@
           <article class="wish-card">
             <span class="wish-icon" aria-hidden="true">🌷</span>
             <h3>Little joys</h3>
-            <p>Everyday moments that make you smile 😊 and memories you’ll keep close.</p>
+            <p>May your days be filled with the little things that make your eyes sparkle and your heart feel at home—because your smile makes everything brighter. 😊🌷💖</p>
           </article>
           <article class="wish-card">
             <span class="wish-icon" aria-hidden="true">🌸</span>
             <h3>So much love</h3>
-            <p>Warm company, kind words 💕, and reminders of how deeply you’re cherished.</p>
+            <p>May you always be surrounded by people who cherish your beautiful heart, hold you close, and remind you just how deeply you are loved—today and every day. 💕🫶🥰</p>
           </article>
           <article class="wish-card">
             <span class="wish-icon" aria-hidden="true">🌼</span>
             <h3>Bright dreams</h3>
-            <p>New possibilities ✨, brave beginnings, and reasons to believe in what’s next.</p>
+            <p>May every dream tucked inside your heart find its way to you. I’ll always be cheering you on as you grow, shine, and become everything you dream of being. ✨🌼🌟</p>
           </article>
           <article class="wish-card">
             <span class="wish-icon" aria-hidden="true">🌺</span>
             <h3>Peaceful days</h3>
-            <p>Time to rest 😌, room to grow, and a little magic along the way.</p>
+            <p>When the world feels too loud, may you find a quiet place to rest and remember you never have to face anything alone. You deserve gentle days and a heart full of peace. 😌🌺🧸</p>
           </article>
         </div>
         <a class="back-to-top" href="#home">Back to your birthday card <span aria-hidden="true">↑</span></a>
+        <button id="openHeartMessage" class="gift-button heart-message-button" type="button" aria-controls="heartMessage" aria-expanded="false">💌 Open my heart</button>
+        <div id="heartMessage" class="gift-message heart-message" aria-label="A message from my heart" tabindex="0" aria-live="polite" aria-hidden="true" inert>
+          <span class="sparkle">✦</span>
+          <h2 class="gift-title">A little note from my heart 💗</h2>
+          <p>I hope you’ll accept this little gift. I want to ask you honestly: please change the actions that have hurt me, and try to treat my feelings with more care. I’m not asking you to change who you are—I’m asking us to work on the things that hurt, together. I care about you so much, and I hope we can listen to each other and build a kinder, happier relationship. 🫶🌷💗</p>
+          <span class="sparkle">✦</span>
+        </div>
       </section>
     </main>
 
